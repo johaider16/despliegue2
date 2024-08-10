@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block titulo %} Horarios {% endblock %}
+
+    
+{% block contenido %}
+    
+<h2>Gestionar Horarios</h2>
+
+<div class="container">
+
+    <div class="box">
+        <table>
+            <tr>
+                <th>id</th>
+                <th>nombre</th>
+                <th>profesion</th>
+            </tr>
+            {% for Profesor in lista %}
+            <tr>
+                <td>{{Profesor.id_profe}}</td>
+                <td>{{Profesor.nombre}}</td>
+                <td>{{Profesor.profesion}}</td>
+                <td> <a href="{% url 'modificar' Profesor.id_profe %}" id="edicion"> <button> Editar</button> </a></td>
+            </tr>
+
+            {% endfor %}
+        </table>
+        <a href="{% url 'form_pro' %}" ><button > crear Horario </button></a>
+
+    </div>
+        </table>
+    </div>
+</div>
+    
+{% endblock %}

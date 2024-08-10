@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block titulo %} index {% endblock %}
+
+    
+{% block contenido %}
+    
+    Modificar
+
+    <h2>{{ form_title }}</h2>
+
+    <form action="" method="post" class="formulario">
+  
+      {% csrf_token %}
+      {{ form }}
+  
+      <button type="submit">Editar</button>
+    </form>
+    <table>
+  
+    </table>
+
+
+{% endblock %}
